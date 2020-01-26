@@ -4,8 +4,8 @@ D:\Users\caylee\Workspace\LearningSpace\LearningSpace\bin\Debug\netcoreapp3.1\Le
 D:\Users\caylee\Workspace\LearningSpace\LearningSpace\bin\Debug\netcoreapp3.1\LearningSpace.runtimeconfig.dev.json
 D:\Users\caylee\Workspace\LearningSpace\LearningSpace\bin\Debug\netcoreapp3.1\LearningSpace.dll
 D:\Users\caylee\Workspace\LearningSpace\LearningSpace\bin\Debug\netcoreapp3.1\LearningSpace.pdb
-D:\Users\caylee\Workspace\LearningSpace\LearningSpace\obj\Debug\netcoreapp3.1\LearningSpace.csprojAssemblyReference.cache
 D:\Users\caylee\Workspace\LearningSpace\LearningSpace\obj\Debug\netcoreapp3.1\LearningSpace.AssemblyInfoInputs.cache
 D:\Users\caylee\Workspace\LearningSpace\LearningSpace\obj\Debug\netcoreapp3.1\LearningSpace.AssemblyInfo.cs
 D:\Users\caylee\Workspace\LearningSpace\LearningSpace\obj\Debug\netcoreapp3.1\LearningSpace.dll
 D:\Users\caylee\Workspace\LearningSpace\LearningSpace\obj\Debug\netcoreapp3.1\LearningSpace.pdb
+D:\Users\caylee\Workspace\LearningSpace\LearningSpace\obj\Debug\netcoreapp3.1\LearningSpace.csprojAssemblyReference.cache

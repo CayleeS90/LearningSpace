@@ -27,7 +27,7 @@
 //                    isPlayerOne = false;
 //                    g.DisplayBoard(arr);
 //                }
-//                else 
+//                else
 //                {
 //                    Console.WriteLine("Player two choose a number.");
 //                    string input = Console.ReadLine();
@@ -43,7 +43,7 @@
 //            Console.ReadLine();
 //        }
 
-       
+
 //    }
 //    public class Game
 //    {
@@ -87,4 +87,5 @@
 //            return true;
 //        }
 //    }
-//} test
+//}
+//test
