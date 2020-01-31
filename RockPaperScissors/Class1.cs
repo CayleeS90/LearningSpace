@@ -1,13 +1,13 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 //namespace LearningSpace.RockPaperScissors
 //{
-    //class Class1
-    //{
-    //    static int userWins = 0;
-    //    static int compWins = 0;
+//    class Class1
+//    {
+//        static int userWins = 0;
+//        static int compWins = 0;
 //        static void Main()
 //        {
 //            bool continueGame = true;
@@ -19,21 +19,21 @@
 //                Console.WriteLine("Type the number for your selection: \n 1.rock \n 2.paper \n 3.scissors");
 
 //                //take in user input
-//                string[] choices = new string[3] {"rock", "paper", "scissors"};
+//                string[] choices = new string[3] { "rock", "paper", "scissors" };
 //                string userInput = Console.ReadLine();
-//                int userNumInput = int.Parse(userInput)-1;
+//                int userChoice = int.Parse(userInput) - 1;
 //                //random choice from the computer
 //                Random rnd = new Random();
-//                int compChoice = rnd.Next(0,3);
-//                Console.WriteLine($"You chose {choices[userNumInput]}");
+//                int compChoice = rnd.Next(0, 3);
+//                Console.WriteLine($"You chose {choices[userChoice]}");
 //                Console.WriteLine($"Computer chose {choices[compChoice]}");
 //                //determin win
 //                //print out who won
-//                if (userNumInput == compChoice)
+//                if (userChoice == compChoice)
 //                {
 //                    Console.WriteLine("Draw");
 //                }
-//                else if ((userNumInput == 1 && compChoice == 0) || (userNumInput == 0 && compChoice == 2) || (userNumInput == 2 && compChoice == 1))
+//                else if ((userChoice == 1 && compChoice == 0) || (userChoice == 0 && compChoice == 2) || (userChoice == 2 && compChoice == 1))
 //                {
 //                    Console.WriteLine("User wins!");
 //                    userWins += 1;
@@ -53,7 +53,7 @@
 //                    continueGame = false;
 //                }
 //            }
-          
+
 //        }
 //    }
 //}
