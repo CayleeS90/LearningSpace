@@ -48,12 +48,20 @@ namespace LearningSpace.Practice
 
         // Write a method that creates an new character array with the letters a-e
         // Write a method that returns a boolean, and loop over your new character array with a foreach loop.
+        // and break out of the foreach loop when you hit the letter c
         public static bool CharArray()
         {
             char[] arr3 = new char[5] { 'a', 'b', 'c', 'd', 'e' };
             foreach (var item in arr3)
             {
-                Console.WriteLine($"{item}");
+                if (item < arr3[2])
+                {
+                    Console.WriteLine($"{item}");
+                }
+                else
+                {
+                    break;
+                }
             }
             return true;
         }
@@ -102,9 +110,6 @@ namespace LearningSpace.Practice
             // Write a string array that has 4 colors in it
             string[] arr2 = new string[] { "Navy", "Violet", "Scarlet", "Tan" };
             Array.ForEach(arr2, Console.WriteLine);
-
         }
-      
-        // and break out of the foreach loop when you hit the letter c
     }
 }
