@@ -54,7 +54,7 @@ namespace LearningSpace.Practice
             char[] arr3 = new char[5] { 'a', 'b', 'c', 'd', 'e' };
             foreach (var item in arr3)
             {
-                if (item < arr3[2])
+                if (item < arr3[3])
                 {
                     Console.WriteLine($"{item}");
                 }
@@ -81,7 +81,7 @@ namespace LearningSpace.Practice
             // TEST Write a method that returns a boolean, takes in 1 parameter that is an int, and checks to see if the value of the int is 10
             Console.WriteLine(IsTen(10));
 
-            //TEST Write a method with a while loop that continues until count = 10.  Increment count by 1 in the loop. 
+            // TEST Write a method with a while loop that continues until count = 10.  Increment count by 1 in the loop. 
             int num = 0;
             while (num < 10)
             {
