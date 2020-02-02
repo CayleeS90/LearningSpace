@@ -45,14 +45,17 @@ namespace LearningSpace.Practice
                 return false;
             }
         }
-        // Write a method with a while loop that continues until count = 10.  Increment count by 1 in the loop. 
-        public static void ToTen()
+
+        // Write a method that creates an new character array with the letters a-e
+        // Write a method that returns a boolean, and loop over your new character array with a foreach loop.
+        public static bool CharArray()
         {
-            int num = 0;
-            while (num < 10)
+            char[] arr3 = new char[5] { 'a', 'b', 'c', 'd', 'e' };
+            foreach (var item in arr3)
             {
-                num += 1;
+                Console.WriteLine($"{item}");
             }
+            return true;
         }
         public static void Main()
         {
@@ -76,7 +79,8 @@ namespace LearningSpace.Practice
             {
                 Console.WriteLine(num += 1);
             }
-            
+            // TEST Write a method that returns a boolean, and loop over your new character array with a foreach loop.
+            CharArray();
 
 
             // Given the following int array...
@@ -100,9 +104,7 @@ namespace LearningSpace.Practice
             Array.ForEach(arr2, Console.WriteLine);
 
         }
-        // Write a method that creates an new character array with the letters a-e
-
-        // Write a method that returns a boolean, and loop over your new character array with a foreach loop.
+      
         // and break out of the foreach loop when you hit the letter c
     }
 }
