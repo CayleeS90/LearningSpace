@@ -57,9 +57,9 @@ namespace LearningSpace.Practice
 
                 // Call your ChangeNum2 method and pass in num2 as a parameter, do not assign the method to a variable
                 ChangeNum2(num2);
-
+                Console.WriteLine(ChangeNum2(num2));
                 // What value will num be now?
-                // Answer: num will still be equal to ChangeNum which is 2. num2 value will still be 4.
+                // Answer: num will still be equal to ChangeNum which is 2. num2 value will be 3.
 
 
                 // Set your variable num equal to the ChangeNum2 method
@@ -73,7 +73,6 @@ namespace LearningSpace.Practice
 
                 // Set your variable num equal to num3. 
                 num = num3;
-                Console.WriteLine(num3);
                 // What value will num be now?
                 // Answer: 5
             }
