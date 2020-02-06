@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Text;
 
 //namespace LearningSpace.Marbles
 //{
@@ -50,7 +50,7 @@ using System.Text;
 //        {
 //            string[] colors = new string[] { "red", "blue", "green", "pink" };
 //            Random rnd = new Random();
-//            for (int i = 0; i <numOfMarbles; i++)
+//            for (int i = 0; i < numOfMarbles; i++)
 //            {
 //                int randomNum = rnd.Next(0, 4);
 //                string color = colors[randomNum];

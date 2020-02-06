@@ -25,10 +25,10 @@ namespace LearningSpace.Practice
             }
 
             //Uncomment the below to debug the DoWork Method to test
-            public static void Main()
-            {
-                DoWork();
-            }
+            //public static void Main()
+            //{
+            //    DoWork();
+            //}
 
             public static void DoWork()
             {
@@ -57,9 +57,8 @@ namespace LearningSpace.Practice
 
                 // Call your ChangeNum2 method and pass in num2 as a parameter, do not assign the method to a variable
                 ChangeNum2(num2);
-                Console.WriteLine(ChangeNum2(num2));
                 // What value will num be now?
-                // Answer: num will still be equal to ChangeNum which is 2. num2 value will be 3.
+                // Answer: num will still be equal to ChangeNum which is 2. num2 value will now be 3.
 
 
                 // Set your variable num equal to the ChangeNum2 method
