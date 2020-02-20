@@ -11,37 +11,40 @@ namespace Learningspace
         {
             /* PROJECTS */
 
-            Calculator calc1 = new Calculator();
-            calc1.Run();
+            //Calculator calc1 = new Calculator();
+            //calc1.Run();
 
-            BlackJackSimple blackJackSimple = new BlackJackSimple();
-            blackJackSimple.Run();
+            //BlackJackSimple blackJackSimple = new BlackJackSimple();
+            //blackJackSimple.Run();
 
             Marbles marbles = new Marbles();
             marbles.Run();
 
-            RockPaperScissors rockPaperScissors = new RockPaperScissors();
-            rockPaperScissors.Run();
+            //Marbles2 marbles2 = new Marbles2();
+            //marbles2.Run();
 
-            TicTacToe ticTacToe = new TicTacToe();
-            ticTacToe.Run();
+            //RockPaperScissors rockPaperScissors = new RockPaperScissors();
+            //rockPaperScissors.Run();
 
-            /* HOME WORK */
+            //TicTacToe ticTacToe = new TicTacToe();
+            //ticTacToe.Run();
 
-            HomeWork1 homeWork1 = new HomeWork1();
-            homeWork1.Run();
+            ///* HOME WORK */
 
-            HomeWork2 homeWork2 = new HomeWork2();
-            homeWork2.Run();
+            //HomeWork1 homeWork1 = new HomeWork1();
+            //homeWork1.Run();
 
-            HomeWork3 homeWork3 = new HomeWork3();
-            homeWork3.Run();
+            //HomeWork2 homeWork2 = new HomeWork2();
+            //homeWork2.Run();
 
-            WaterTracker waterTracker = new WaterTracker();
-            waterTracker.Run();
+            //HomeWork3 homeWork3 = new HomeWork3();
+            //homeWork3.Run();
 
-            WaterTracker2 waterTracker2 = new WaterTracker2();
-            waterTracker2.Run();
+            //WaterTracker waterTracker = new WaterTracker();
+            //waterTracker.Run();
+
+            //WaterTracker2 waterTracker2 = new WaterTracker2();
+            //waterTracker2.Run();
         }
     }
 }
