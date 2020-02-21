@@ -17,8 +17,8 @@ namespace Learningspace
             //BlackJackSimple blackJackSimple = new BlackJackSimple();
             //blackJackSimple.Run();
 
-            Marbles marbles = new Marbles();
-            marbles.Run();
+            //Marbles marbles = new Marbles();
+            //marbles.Run();
 
             //Marbles2 marbles2 = new Marbles2();
             //marbles2.Run();
@@ -37,8 +37,8 @@ namespace Learningspace
             //HomeWork2 homeWork2 = new HomeWork2();
             //homeWork2.Run();
 
-            //HomeWork3 homeWork3 = new HomeWork3();
-            //homeWork3.Run();
+            HomeWork3 homeWork3 = new HomeWork3();
+            homeWork3.Run();
 
             //WaterTracker waterTracker = new WaterTracker();
             //waterTracker.Run();
