@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LearningSpace
 {
-    public class Calculator
+    public class Calculator2
     {
         public static decimal Add(decimal num1, decimal num2)
         {

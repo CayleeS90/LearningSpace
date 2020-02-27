@@ -14,6 +14,9 @@ namespace Learningspace
             //Calculator calc1 = new Calculator();
             //calc1.Run();
 
+            //Calculator2 calc2 = new Calculator2();
+            //calc2.Run();
+
             //BlackJackSimple blackJackSimple = new BlackJackSimple();
             //blackJackSimple.Run();
 
@@ -37,8 +40,14 @@ namespace Learningspace
             //HomeWork2 homeWork2 = new HomeWork2();
             //homeWork2.Run();
 
-            HomeWork3 homeWork3 = new HomeWork3();
-            homeWork3.Run();
+            //HomeWork3 homeWork3 = new HomeWork3();
+            //homeWork3.Run();
+
+            HomeWork4 homeWork4 = new HomeWork4();
+            homeWork4.Run();
+
+            //HomeWork4Pre homeWork4Pre = new HomeWork4Pre();
+            //homeWork4Pre.Run();
 
             //WaterTracker waterTracker = new WaterTracker();
             //waterTracker.Run();
