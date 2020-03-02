@@ -17,8 +17,11 @@ namespace Learningspace
             //Calculator2 calc2 = new Calculator2();
             //calc2.Run();
 
-            //BlackJackSimple blackJackSimple = new BlackJackSimple();
-            //blackJackSimple.Run();
+            BlackJackSimple blackJackSimple = new BlackJackSimple();
+            blackJackSimple.Run();
+
+            //BlackJackSimple2 blackJackSimple2 = new BlackJackSimple2();
+            //blackJackSimple2.Run();
 
             //Marbles marbles = new Marbles();
             //marbles.Run();
@@ -28,6 +31,9 @@ namespace Learningspace
 
             //RockPaperScissors rockPaperScissors = new RockPaperScissors();
             //rockPaperScissors.Run();
+
+            //RockPaperScissors2 rockPaperScissors2 = new RockPaperScissors2();
+            //rockPaperScissors2.Run();
 
             //TicTacToe ticTacToe = new TicTacToe();
             //ticTacToe.Run();
@@ -43,8 +49,8 @@ namespace Learningspace
             //HomeWork3 homeWork3 = new HomeWork3();
             //homeWork3.Run();
 
-            HomeWork4 homeWork4 = new HomeWork4();
-            homeWork4.Run();
+            //HomeWork4 homeWork4 = new HomeWork4();
+            //homeWork4.Run();
 
             //HomeWork4Pre homeWork4Pre = new HomeWork4Pre();
             //homeWork4Pre.Run();

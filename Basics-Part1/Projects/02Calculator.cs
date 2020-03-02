@@ -6,59 +6,58 @@ namespace LearningSpace
 {
     public class Calculator2
     {
-        public static decimal Add(decimal num1, decimal num2)
+        // operations need to be funtioning methods
+        public decimal Add(decimal num1, decimal num2)
         {
             return num1 + num2;
         }
-        public static decimal Sub(decimal num1, decimal num2)
+        public decimal Sub(decimal num1, decimal num2)
         {
             return num1 - num2;
         }
-        public static decimal Multiply(decimal num1, decimal num2)
+        public decimal Multiply(decimal num1, decimal num2)
         {
             return num1 * num2;
         }
-        public static decimal Divide(decimal num1, decimal num2)
+        public decimal Divide(decimal num1, decimal num2)
         {
             return num1 / num2;
         }
         public void Run()
         {
+            // must be able to enter in and read number input
+            Console.WriteLine("Please choose your first number.");
+            decimal num1 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter first number");
-            string input1 = Console.ReadLine();
-            decimal num1 = decimal.Parse(input1);
+            Console.WriteLine("Please choose your second number.");
+            decimal num2 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter second number");
-            string input2 = Console.ReadLine();
-            decimal num2 = decimal.Parse(input2);
-
-            Console.WriteLine("Choose your operation: +, -, *, /");
-
+            // must be able to choose and input an operation
+            Console.WriteLine("Please choose an operation: +, -, * or /");
             string operation = Console.ReadLine();
 
             decimal result = 0;
+
             switch (operation)
             {
                 case "+":
-                    result = num1 + num2;
+                    result = Add(num1, num2);
                     break;
                 case "-":
-                    result = num1 - num2;
+                    result = Sub(num1, num2);
                     break;
                 case "*":
-                    result = num1 * num2;
+                    result = Multiply(num1, num2);
                     break;
                 case "/":
-                    result = num1 / num2;
+                    result = Divide(num1, num2);
                     break;
                 default:
-                    Console.WriteLine("This is not a valid choice");
+                    Console.WriteLine("This is not a valid operation.");
                     break;
             }
-            //output message with result
-            Console.WriteLine($"The solution {num1} {operation} {num2} is {result}");
+            // print sum
+            Console.WriteLine($"the sum of {num1} {operation} {num2} = {result}");
         }
-
     }
 }

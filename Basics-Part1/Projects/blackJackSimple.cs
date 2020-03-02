@@ -28,10 +28,16 @@ class BlackJackSimple
             compScore += temp4;
 
             //ask if user wants to hit
-            Console.WriteLine("Would you like to hit?");
+            Console.WriteLine("Would you like to hit? (Y/N)");
             //take user input Y or N
+            string userHit = Console.ReadLine().ToUpper();
+
             bool hit = false;
-            while (hit)
+                
+            if (userHit == "Y") hit = true;
+            else hit = false;
+            
+            while (hit == true)
             {
                 int temp5 = DealCard(deck, true, "user");
                 userScore += temp5;
@@ -42,15 +48,17 @@ class BlackJackSimple
                 }
                 Console.WriteLine("Hit again?");
                 //to do: console.ReadLine take Y or N from player
+                userHit = Console.ReadLine().ToUpper();
+                if (userHit != "Y") hit = false;
             }
             //add up points of cards
             if (userScore > compScore)
             {
-                Console.WriteLine("User wins!");
+                Console.WriteLine($"User score is {userScore} User wins!");
             }
             else
             {
-                Console.WriteLine("Computer wins!");
+                Console.WriteLine($"Computer score is {compScore}. Computer wins!");
             }
             //to do: console.ReadLine take Y or N from player
             isGameOn = false;
