@@ -14,33 +14,28 @@ class BlackJackSimple
             int userScore = 0;
             int compScore = 0;
             //deal cards 2 cards to user and computer, add up points of cards
-            List<string> deck = GenerateDeck();
-            int temp = DealCard(deck, true, "user");
-            userScore += temp;
+            var deck = GenerateDeck();
+            userScore += DealCard(deck, true, "user");
 
-            int temp2 = DealCard(deck, true, "user");
-            userScore += temp2;
+            userScore += DealCard(deck, true, "user");
 
-            int temp3 = DealCard(deck, false, "computer");
-            compScore += temp3;
+            compScore += DealCard(deck, false, "computer");
 
-            int temp4 = DealCard(deck, true, "computer");
-            compScore += temp4;
-
+            compScore += DealCard(deck, true, "computer");
+          
             //ask if user wants to hit
             Console.WriteLine("Would you like to hit? (Y/N)");
             //take user input Y or N
-            string userHit = Console.ReadLine().ToUpper();
+            var userHit = Console.ReadLine().ToUpper();
 
             bool hit = false;
                 
             if (userHit == "Y") hit = true;
-            else hit = false;
             
-            while (hit == true)
+            while (hit)
             {
-                int temp5 = DealCard(deck, true, "user");
-                userScore += temp5;
+                userScore += DealCard(deck, true, "user");
+                 
                 if (userScore > 21)
                 {
                     Console.WriteLine("Computer wins");
@@ -66,7 +61,7 @@ class BlackJackSimple
     }
     public static List<string> GenerateDeck()
     {
-        List<string> deck = new List<string>();
+        var deck = new List<string>();
         string[] cardTypes = new string[] { "Spades", "hearts", "Diamonds", "Clubs" };
         string[] cardValues = new string[] { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
         foreach (var cardType in cardTypes)
@@ -81,7 +76,7 @@ class BlackJackSimple
     }
     public static int DealCard(List<string> deck, bool displayCard, string player)
     {
-        Random rnd = new Random();
+        var rnd = new Random();
         int cardIndex = rnd.Next(0, deck.Count);
         string card = deck[cardIndex];
         if (displayCard == true)
