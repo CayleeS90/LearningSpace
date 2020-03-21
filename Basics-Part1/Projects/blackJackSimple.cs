@@ -7,12 +7,12 @@ class BlackJackSimple
     public void Run()
     {
         Console.WriteLine("Welcome to BlackJack!");
-        bool isGameOn = true;
+        var isGameOn = true;
         while (isGameOn)
         {
             //set score to 0 
-            int userScore = 0;
-            int compScore = 0;
+            var userScore = 0;
+            var compScore = 0;
             //deal cards 2 cards to user and computer, add up points of cards
             var deck = GenerateDeck();
             userScore += DealCard(deck, true, "user");
@@ -28,7 +28,7 @@ class BlackJackSimple
             //take user input Y or N
             var userHit = Console.ReadLine().ToUpper();
 
-            bool hit = false;
+            var hit = false;
                 
             if (userHit == "Y") hit = true;
             
@@ -62,13 +62,13 @@ class BlackJackSimple
     public static List<string> GenerateDeck()
     {
         var deck = new List<string>();
-        string[] cardTypes = new string[] { "Spades", "hearts", "Diamonds", "Clubs" };
-        string[] cardValues = new string[] { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
+        var cardTypes = new string[] { "Spades", "hearts", "Diamonds", "Clubs" };
+        var cardValues = new string[] { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
         foreach (var cardType in cardTypes)
         {
             foreach (var cardValue in cardValues)
             {
-                string card = cardValue + " of " + cardType;
+                var card = cardValue + " of " + cardType;
                 deck.Add(card);
             }
         }
@@ -77,8 +77,8 @@ class BlackJackSimple
     public static int DealCard(List<string> deck, bool displayCard, string player)
     {
         var rnd = new Random();
-        int cardIndex = rnd.Next(0, deck.Count);
-        string card = deck[cardIndex];
+        var cardIndex = rnd.Next(0, deck.Count);
+        var card = deck[cardIndex];
         if (displayCard == true)
         {
             Console.WriteLine($"{player} card is {card}");
@@ -90,47 +90,17 @@ class BlackJackSimple
 
     private static int CardValueToScore(string card)
     {
-        if (card.Contains("2"))
-        {
-            return 2;
-        }
-        if (card.Contains("3"))
-        {
-            return 3;
-        }
-        if (card.Contains("4"))
-        {
-            return 4;
-        }
-        if (card.Contains("5"))
-        {
-            return 5;
-        }
-        if (card.Contains("6"))
-        {
-            return 6;
-        }
-        if (card.Contains("7"))
-        {
-            return 7;
-        }
-        if (card.Contains("8"))
-        {
-            return 8;
-        }
-        if (card.Contains("9"))
-        {
-            return 9;
-        }
-        if (card.Contains("10") || card.Contains("Jack") || card.Contains("Queen") || card.Contains("King"))
-        {
-            return 10;
-        }
-
-        if (card.Contains("Ace"))
-        {
-            return 1;
-        }
+        if (card.Contains("2")) return 2;
+        if (card.Contains("3")) return 3;
+        if (card.Contains("4")) return 4;
+        if (card.Contains("5")) return 5;
+        if (card.Contains("6")) return 6;
+        if (card.Contains("7")) return 7;
+        if (card.Contains("8")) return 8;
+        if (card.Contains("9")) return 9;
+        if (card.Contains("10") || card.Contains("Jack") || card.Contains("Queen") || card.Contains("King")) return 10;
+        if (card.Contains("Ace")) return 1;
+     
         return 0;
     }
 }
