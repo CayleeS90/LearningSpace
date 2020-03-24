@@ -48,17 +48,16 @@ namespace LearningSpace
                     hitInput = Console.ReadLine().ToUpper();
 
                     if (hitInput != "Y") hit = false;
-
-                    if (userScore > compScore)
-                    {
-                        Console.WriteLine($"User score is {userScore} You win!");
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Computer score is {compScore} You lose!");
-                    }
-                    isGameOn = false;
                 }
+                if (userScore > compScore && userScore < 21)
+                {
+                    Console.WriteLine($"User score is {userScore} You win!");
+                }
+                else
+                {
+                    Console.WriteLine($"Computer score is {compScore} You lose!");
+                }
+                isGameOn = false;
             }
         }
 

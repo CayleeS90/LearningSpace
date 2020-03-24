@@ -17,11 +17,11 @@ namespace Learningspace
             //Calculator2 calc2 = new Calculator2();
             //calc2.Run();
 
-            BlackJackSimple blackJackSimple = new BlackJackSimple();
-            blackJackSimple.Run();
+            //BlackJackSimple blackJackSimple = new BlackJackSimple();
+            //blackJackSimple.Run();
 
-            //BlackJackSimple2 blackJackSimple2 = new BlackJackSimple2();
-            //blackJackSimple2.Run();
+            BlackJackSimple2 blackJackSimple2 = new BlackJackSimple2();
+            blackJackSimple2.Run();
 
             //Marbles marbles = new Marbles();
             //marbles.Run();
