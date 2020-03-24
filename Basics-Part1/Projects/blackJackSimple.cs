@@ -74,15 +74,13 @@ class BlackJackSimple
         }
         return deck;
     }
+
     public static int DealCard(List<string> deck, bool displayCard, string player)
     {
         var rnd = new Random();
         var cardIndex = rnd.Next(0, deck.Count);
         var card = deck[cardIndex];
-        if (displayCard == true)
-        {
-            Console.WriteLine($"{player} card is {card}");
-        }
+        if (displayCard) Console.WriteLine($"{player} card is {card}");
         var cardValue = CardValueToScore(card);
         deck.RemoveAt(cardIndex);
         return cardValue;
