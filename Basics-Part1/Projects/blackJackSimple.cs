@@ -2,104 +2,117 @@
 using System.Collections.Generic;
 using System.Text;
 
-class BlackJackSimple
+namespace LearningSpace
 {
-    public void Run()
+    class BlackJackSimple
     {
-        Console.WriteLine("Welcome to BlackJack!");
-        var isGameOn = true;
-        while (isGameOn)
+        /// <summary> 
+        /// initiate game
+        /// create deck of cards 
+        /// deal 2 random cards to user and computer
+        /// show both user cards and only one comp card
+        /// ask if user would like to hit for new card
+        /// check score, winner is closest to 21 without going over
+        /// </summary> 
+        public void Run()
         {
-            //set score to 0 
-            var userScore = 0;
-            var compScore = 0;
-            //deal cards 2 cards to user and computer, add up points of cards
-            var deck = GenerateDeck();
-            userScore += DealCard(deck, true, "user");
-
-            userScore += DealCard(deck, true, "user");
-
-            compScore += DealCard(deck, false, "computer");
-
-            compScore += DealCard(deck, true, "computer");
-          
-            //ask if user wants to hit
-            Console.WriteLine("Would you like to hit? (Y/N)");
-            //take user input Y or N
-            var userHit = Console.ReadLine().ToUpper();
-
-            var hit = false;
-                
-            if (userHit == "Y") hit = true;
-            
-            while (hit)
+            Console.WriteLine("Welcome to Blackjack!");
+            var isGameOn = true;
+            while (isGameOn)
             {
-                userScore += DealCard(deck, true, "user");
-                 
-                if (userScore > 21)
+                var userScore = 0;
+                var compScore = 0;
+                var deck = GenerateDeck();
+
+                userScore += DealCard(deck, true, "User");
+                userScore += DealCard(deck, true, "User");
+                compScore += DealCard(deck, false, "Computer");
+                compScore += DealCard(deck, true, "Computer");
+
+                Console.WriteLine("Would you like to hit for another card?(Y/N)");
+                var hitInput = Console.ReadLine().ToUpper();
+                var hit = true;
+
+                if (hitInput != "Y") hit = false;
+
+                while (hit)
                 {
-                    Console.WriteLine("Computer wins");
-                    break;
+                    userScore += DealCard(deck, true, "User");
+
+                    if (userScore > 21)
+                    {
+                        Console.WriteLine("Computer Wins");
+                        break;
+                    }
+                    Console.WriteLine("Hit again?(Y/N)");
+                    hitInput = Console.ReadLine().ToUpper();
+
+                    if (hitInput != "Y") hit = false;
                 }
-                Console.WriteLine("Hit again?");
-                //to do: console.ReadLine take Y or N from player
-                userHit = Console.ReadLine().ToUpper();
-                if (userHit != "Y") hit = false;
+                if (userScore > compScore && userScore < 21) Console.WriteLine($"User score is {userScore} You win!");
+                else Console.WriteLine($"Computer score is {compScore} You lose!");
+
+                isGameOn = false;
             }
-            //add up points of cards
-            if (userScore > compScore)
-            {
-                Console.WriteLine($"User score is {userScore} User wins!");
-            }
-            else
-            {
-                Console.WriteLine($"Computer score is {compScore}. Computer wins!");
-            }
-            //to do: console.ReadLine take Y or N from player
-            isGameOn = false;
         }
-    }
-    public static List<string> GenerateDeck()
-    {
-        var deck = new List<string>();
-        var cardTypes = new string[] { "Spades", "hearts", "Diamonds", "Clubs" };
-        var cardValues = new string[] { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
-        foreach (var cardType in cardTypes)
+
+        /// <summary> 
+        /// hardcode values for cards
+        /// hardcode types of cards
+        /// nested foreach loops create combination of values and types of cards to add to the deck
+        /// return deck
+        /// </summary> 
+        public List<string> GenerateDeck()
         {
-            foreach (var cardValue in cardValues)
+            var deck = new List<string>();
+            var cardTypes = new string[] { "Hearts", "Clubs", "Spades", "Diamonds", };
+            var cardValues = new string[] { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
+            foreach (var cardType in cardTypes)
             {
-                var card = cardValue + " of " + cardType;
-                deck.Add(card);
+                foreach (var cardValue in cardValues)
+                {
+                    var card = cardValue + " of " + cardType;
+                    deck.Add(card);
+                }
             }
+            return deck;
         }
-        return deck;
-    }
+        /// <summary> 
+        /// generate a random number from 0 to size of deck (deck.Count)
+        /// get card from deck based on index
+        /// Remove card from deck
+        /// get and return value of card
+        /// </summary> 
+        /// <param name="deck"></param>
+        public int DealCard(List<string> deck, bool displayCard, string player)
+        {
+            Random rnd = new Random();
+            var cardIndex = rnd.Next(0, deck.Count);
+            var card = deck[cardIndex];
+            deck.RemoveAt(cardIndex);
+            if (displayCard) Console.WriteLine($"{player} card is {card}");
+            var cardValue = GetCardValue(card);
 
-    public static int DealCard(List<string> deck, bool displayCard, string player)
-    {
-        var rnd = new Random();
-        var cardIndex = rnd.Next(0, deck.Count);
-        var card = deck[cardIndex];
-        if (displayCard) Console.WriteLine($"{player} card is {card}");
-        var cardValue = CardValueToScore(card);
-        deck.RemoveAt(cardIndex);
-        return cardValue;
-    }
+            return cardValue;
+        }
+        public int GetCardValue(string card)
+        {
+            if (card.Contains("2")) return 2;
+            if (card.Contains("3")) return 3;
+            if (card.Contains("4")) return 4;
+            if (card.Contains("5")) return 5;
+            if (card.Contains("6")) return 6;
+            if (card.Contains("7")) return 7;
+            if (card.Contains("8")) return 8;
+            if (card.Contains("9")) return 9;
+            if (card.Contains("10")) return 10;
+            if (card.Contains("Jack") || card.Contains("Queen") || card.Contains("King")) return 10;
+            if (card.Contains("Ace")) return 1;
 
-    private static int CardValueToScore(string card)
-    {
-        if (card.Contains("2")) return 2;
-        if (card.Contains("3")) return 3;
-        if (card.Contains("4")) return 4;
-        if (card.Contains("5")) return 5;
-        if (card.Contains("6")) return 6;
-        if (card.Contains("7")) return 7;
-        if (card.Contains("8")) return 8;
-        if (card.Contains("9")) return 9;
-        if (card.Contains("10") || card.Contains("Jack") || card.Contains("Queen") || card.Contains("King")) return 10;
-        if (card.Contains("Ace")) return 1;
-     
-        return 0;
+            return 0;
+        }
+
     }
 }
+
 

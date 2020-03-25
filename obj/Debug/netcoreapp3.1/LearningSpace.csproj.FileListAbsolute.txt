@@ -9,3 +9,5 @@ D:\Users\caylee\Workspace\LearningSpace\LearningSpace\obj\Debug\netcoreapp3.1\Le
 D:\Users\caylee\Workspace\LearningSpace\LearningSpace\obj\Debug\netcoreapp3.1\LearningSpace.dll
 D:\Users\caylee\Workspace\LearningSpace\LearningSpace\obj\Debug\netcoreapp3.1\LearningSpace.pdb
 D:\Users\caylee\Workspace\LearningSpace\LearningSpace\obj\Debug\netcoreapp3.1\LearningSpace.csprojAssemblyReference.cache
+D:\Users\caylee\Workspace\LearningSpace\LearningSpace\obj\Debug\netcoreapp3.1\LearningSpace.csproj.CoreCompileInputs.cache
+D:\Users\caylee\Workspace\LearningSpace\LearningSpace\obj\Debug\netcoreapp3.1\LearningSpace.genruntimeconfig.cache

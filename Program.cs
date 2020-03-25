@@ -55,6 +55,9 @@ namespace Learningspace
             //HomeWork4Pre homeWork4Pre = new HomeWork4Pre();
             //homeWork4Pre.Run();
 
+            HomeWork5 homework5 = new HomeWork5();
+            homework5.Run();
+
             //WaterTracker waterTracker = new WaterTracker();
             //waterTracker.Run();
 
