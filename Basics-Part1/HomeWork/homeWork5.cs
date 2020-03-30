@@ -125,7 +125,7 @@ namespace LearningSpace
             {
                 foreach (var cardValue in cardValues)
                 {
-                    var card = (cardValue + "of" + cardType);
+                    var card = cardValue + " of " + cardType;
                     deck.Add(card);
                 }
             }

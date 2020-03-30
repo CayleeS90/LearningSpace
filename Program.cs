@@ -20,8 +20,8 @@ namespace Learningspace
             //BlackJackSimple blackJackSimple = new BlackJackSimple();
             //blackJackSimple.Run();
 
-            BlackJackSimple2 blackJackSimple2 = new BlackJackSimple2();
-            blackJackSimple2.Run();
+            //BlackJackSimple2 blackJackSimple2 = new BlackJackSimple2();
+            //blackJackSimple2.Run();
 
             //Marbles marbles = new Marbles();
             //marbles.Run();
@@ -55,14 +55,19 @@ namespace Learningspace
             //HomeWork4Pre homeWork4Pre = new HomeWork4Pre();
             //homeWork4Pre.Run();
 
-            HomeWork5 homework5 = new HomeWork5();
-            homework5.Run();
+            //HomeWork5 homework5 = new HomeWork5();
+            //homework5.Run();
 
             //WaterTracker waterTracker = new WaterTracker();
             //waterTracker.Run();
 
             //WaterTracker2 waterTracker2 = new WaterTracker2();
             //waterTracker2.Run();
+
+            ///Projects Part 2
+
+            WaterTracking waterTracking = new WaterTracking();
+            waterTracking.Run();
         }
     }
 }
