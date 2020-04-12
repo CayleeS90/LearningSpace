@@ -1,0 +1,62 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace LearningSpace
+{ 
+    class BlackJack
+    {
+        public void Run()
+        {
+            // Create new deck
+            Deck deck = new Deck(); /// creates an object of Deck class and calls the constructor
+
+            // Shuffle new deck
+            deck.Shuffle();
+
+            // Deal initial 4 cards
+            Hand userHand = new Hand();
+            userHand.AddCard(deck.DealTopCard(), true, "User");
+            userHand.AddCard(deck.DealTopCard(), true, "User");
+
+            Console.WriteLine($"User total hand value is: {userHand.TotalValue}");
+
+            Hand compHand = new Hand();
+            compHand.AddCard(deck.DealTopCard(), false, "Computer");
+            compHand.AddCard(deck.DealTopCard(), true, "Computer");
+
+            // Ask user to hit
+            Console.WriteLine("Do you want to hit?");
+            while (true)
+            {
+                var userResponse = Console.ReadLine().ToLower();
+                if (userResponse != "y") break;
+
+                // If user hits, add card to hand
+                if (!userHand.Hit(deck.DealTopCard(), "User")) break;
+            }
+
+            if (userHand.Bust) Console.WriteLine("User bust! Comp wins!");
+            else
+            {
+                // Comp hit
+                while (compHand.TotalValue <= 11)
+                {
+                    if (!compHand.Hit(deck.DealTopCard(), "Computer")) break;
+                }
+
+                // Compare scores of computer hand vs user hand
+                if (compHand.Bust) Console.WriteLine("Comp bust! User wins!");
+                else
+                {
+
+                    if (userHand.TotalValue > compHand.TotalValue) Console.WriteLine("User wins!");
+                    else Console.WriteLine("Computer wins! ");
+                }
+            }
+
+            Console.WriteLine($"User hand total {userHand.TotalValue} and computer hand {compHand.TotalValue}");
+        }
+    }
+}
+

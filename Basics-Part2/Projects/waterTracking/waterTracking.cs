@@ -11,7 +11,7 @@ namespace LearningSpace//.Basics_Part2.Projects Why do I have to remove this par
         {
             List<User> currentUsers = new List<User>();
 
-            while (true)
+            while (true) 
             {
                 Console.WriteLine("Would you like to: \n 1. Add User \n 2. Add water for existing User \n 3. Quit");
 
@@ -28,10 +28,12 @@ namespace LearningSpace//.Basics_Part2.Projects Why do I have to remove this par
                     // Bonus! Refactor this so the program won't crash if you enter a letter in.  
                     // You should let the user know "not a valid entry" and allow the user to try again
                     Console.WriteLine("Enter water goal in ounces (oz):");
-                    int waterGoal = int.Parse(Console.ReadLine());
+                    int waterGoal = int.Parse(Console.ReadLine()); 
 
                     User user = new User(firstName, lastName);
                     user.WaterGoal = waterGoal;
+                    user.FirstName = "Caylee";
+                    var name = user.FirstName;
 
                     currentUsers.Add(user);
                 }
@@ -51,7 +53,7 @@ namespace LearningSpace//.Basics_Part2.Projects Why do I have to remove this par
 
                     while (true)
                     {
-                        if (!int.TryParse(Console.ReadLine(), out int result))
+                        if (!int.TryParse(Console.ReadLine(), out int result)) /// what's happening here?
                             break;
 
                         day.AddWaterEntry(result);

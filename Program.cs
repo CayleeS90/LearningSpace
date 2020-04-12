@@ -66,8 +66,20 @@ namespace Learningspace
 
             ///Projects Part 2
 
-            WaterTracking waterTracking = new WaterTracking();
-            waterTracking.Run();
+            //WaterTracking waterTracking = new WaterTracking();
+            //waterTracking.Run();
+
+            //RockClimbing rockClimbing = new RockClimbing();
+            //rockClimbing.Run();
+
+            //BlackJack blackJack = new BlackJack();
+            //blackJack.Run();
+
+            /// Home Work part 2
+
+            Hw1 hw1 = new Hw1();
+            hw1.Run();
+
         }
     }
 }

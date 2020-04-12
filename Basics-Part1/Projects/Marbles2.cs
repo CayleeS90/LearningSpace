@@ -54,7 +54,7 @@ namespace LearningSpace
             Random rnd = new Random();
             for (int i = 0; i < numMarbles; i++)
             {
-                int randomNum = rnd.Next(0, 4);
+                int randomNum = rnd.Next(0, colors.Length);
                 string color = colors[randomNum];
                 bag.Add(color);
                 Console.WriteLine($"Marble {i + 1} is {color}");

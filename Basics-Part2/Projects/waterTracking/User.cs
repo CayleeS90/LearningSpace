@@ -7,7 +7,7 @@ namespace LearningSpace//.Basics_Part2.Projects.waterTracking
 {
     class User
     {
-        public User(string firstName, string lastName)
+        public User(string firstName, string lastName) // constructor
         {
             FirstName = firstName;
             LastName = lastName;
