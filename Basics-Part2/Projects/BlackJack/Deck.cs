@@ -13,7 +13,7 @@ namespace LearningSpace
         private static readonly string[] _cardValues = new string[] { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
 
 
-        public Deck() /// contructor?
+        public Deck() 
         {
             Cards = new List<Card>();
             GenerateDeck();

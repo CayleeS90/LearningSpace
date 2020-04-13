@@ -1,4 +1,5 @@
 ﻿using LearningSpace;
+using LearningSpace.Basics_Part2.HomeWork.Hw2;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -77,9 +78,20 @@ namespace Learningspace
 
             /// Home Work part 2
 
-            Hw1 hw1 = new Hw1();
-            hw1.Run();
+            //Hw1 hw1 = new Hw1();
+            //hw1.Run();
 
+            Hw2.Run hw2 = new Hw2.Run();
+            hw2.Main();
+
+            //Hw3 hw3 = new Hw3();
+            //hw3.Main();
+
+            //Hw4 hw4 = new Hw4();
+            //hw4.Main();
+
+            //Hw5 hw5 = new Hw5();
+            //hw5.Main();
         }
     }
 }

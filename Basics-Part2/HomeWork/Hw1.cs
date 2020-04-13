@@ -46,12 +46,12 @@ namespace LearningSpace
             // Add a method called GetSummary() will print out all of the properties of this car
             public void GetSummary()
             {
-                Console.WriteLine($" Make: {Make.Name} ({Make.Description}) \n Model: {Make.Model.Name} ({Make.Model.Description})\n Year: {Year} \n" +
-                $" Max Speed: {MaxSpeed} mph \n Fuel tank capacity: {MaxGas} gallons");
+                Console.WriteLine($" Make: {Make.Name} ({Make.Description}) \n Model: {Make.Model.Name}" +
+                $" ({Make.Model.Description})\n Year: {Year} \n Max Speed: {MaxSpeed} mph \n" +
+                $" Fuel tank capacity: {MaxGas} gallons");
 
-                string result = (GasTankIsEmpty) ? " Gas tank is empty!" : $" Contains {CurrentGas} gallons of fuel \n";
+                string result = (GasTankIsEmpty) ? " Gas tank is empty! \n" : $" Contains {CurrentGas} gallons of fuel \n";
                 Console.WriteLine(result);
-                Console.WriteLine(" ");
             }
         }
         // -----------------------------------------------------------
