@@ -33,7 +33,5 @@ namespace LearningSpace.Basics_Part2.HomeWork.Hw2
         {
             return firstNum / secondNum;
         }
-
-
     }
 }
