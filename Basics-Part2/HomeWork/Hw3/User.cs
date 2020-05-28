@@ -9,10 +9,10 @@ namespace LearningSpace.Basics_Part2.HomeWork.Hw3
         // Put this class into a new file
         // Add a property for user choice such as rock, paper, or scissors
 
-        public User(string userChoice)
+        public User(int _userChoice)
         {
-            UserChoice = userChoice;
+            UserChoice = _userChoice;
         }
-        public string UserChoice { get; set; }
+        public int UserChoice { get; set; }
     }
 }

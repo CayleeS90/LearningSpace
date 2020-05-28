@@ -39,9 +39,8 @@ namespace LearningSpace.Basics_Part2.HomeWork.Hw3
         }
         public int UserChoice()
         {
-            var _userChoice = int.Parse(Console.ReadLine()) - 1;
-
-            return _userChoice;
+            var user = new User(int.Parse(Console.ReadLine()) - 1);
+            return user.UserChoice;
         }
         public int CompChoice()
         {
@@ -58,11 +57,13 @@ namespace LearningSpace.Basics_Part2.HomeWork.Hw3
             if (_userChoice == _compChoice) Console.WriteLine("Draw!");
             else if ((_userChoice == 1 && _compChoice == 0) || (_userChoice == 0 && _compChoice == 2) || (_userChoice == 2 && _compChoice == 1))
             {
-                Console.WriteLine("User wins!"); userWins += 1;
+                Console.WriteLine("User wins!");
+                userWins += 1;
             }
             else
             {
-                Console.WriteLine("Computer Wins!"); compWins += 1;
+                Console.WriteLine("Computer Wins!");
+                compWins += 1;
             }
             Console.WriteLine($"User has won {userWins} times. Computer has won {compWins} times");
 
