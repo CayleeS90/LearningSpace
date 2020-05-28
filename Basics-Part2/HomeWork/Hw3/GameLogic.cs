@@ -23,7 +23,7 @@ namespace LearningSpace.Basics_Part2.HomeWork.Hw3
                 var _userChoice = UserChoice();
                 var _compChoice = CompChoice();
 
-                DeterminWinner(choices, _userChoice, _compChoice);
+                DetermineWinner(choices, _userChoice, _compChoice);
 
                 Console.WriteLine("Would you like to continue playing? (Y/N)");
                 var playAgain = Console.ReadLine().ToUpper();
@@ -50,7 +50,7 @@ namespace LearningSpace.Basics_Part2.HomeWork.Hw3
 
             return _compChoice;
         }
-        public int DeterminWinner(string[] choices, int _userChoice, int _compChoice)
+        public int DetermineWinner(string[] choices, int _userChoice, int _compChoice)
         {
             Console.WriteLine($"You chose {choices[_userChoice]}");
             Console.WriteLine($"Computer chose {choices[_compChoice]}");
@@ -64,7 +64,6 @@ namespace LearningSpace.Basics_Part2.HomeWork.Hw3
             {
                 Console.WriteLine("Computer Wins!"); compWins += 1;
             }
-
             Console.WriteLine($"User has won {userWins} times. Computer has won {compWins} times");
 
             return 0;
