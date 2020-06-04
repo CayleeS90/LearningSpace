@@ -4,15 +4,17 @@ using System.Text;
 
 namespace LearningSpace.Basics_Part2.HomeWork.Hw3
 {
-    public class User
+    public class Player
     {
         // Put this class into a new file
         // Add a property for user choice such as rock, paper, or scissors
 
-        public User(int _userChoice)
+        public Player(string name)
         {
-            UserChoice = _userChoice;
+            Name = name;
         }
-        public int UserChoice { get; set; }
+
+        public string Name { get; set; }
+        public int Choice { get; set; }
     }
 }
