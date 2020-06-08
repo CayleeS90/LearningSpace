@@ -43,16 +43,15 @@ namespace LearningSpace.Basics_Part2.HomeWork.Hw3
 
         public void PlayerChoice(Player player)
         {
-            int n;
-
+            int playerChoice;
             if (player.Name == "Computer")
             {
                 Random rnd = new Random();
-                n = rnd.Next(0, 3);
+                playerChoice = rnd.Next(0, 3);
             }
-            else n = int.Parse(Console.ReadLine()) - 1;
+            else playerChoice = int.Parse(Console.ReadLine()) - 1;
 
-            player.Choice = n;
+            player.Choice = playerChoice;
         }
         
         public void PrintFinalChoices(int userChoice, int compChoice)
