@@ -20,7 +20,6 @@ namespace LearningSpace.Basics_Part2.HomeWork.Hw3
         {
             while (true)
             {
-                
                 var user = new Player("User");
                 var computer = new Player("Computer");
 
