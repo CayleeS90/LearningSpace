@@ -5,8 +5,12 @@ using System.Text;
 
 namespace LearningSpace.Basics_Part2.HomeWork.Hw3
 {
-    public class GameLogic
+    public class Hw3GameLogic
     {
+        // -----------------------------------------------------------
+        // Re-create the Part 1: Rock Paper Scissors project (03) into a Rock Paper Scissors game with classes
+        // -----------------------------------------------------------
+
         // Put this class into a new file
         // Put all Console.ReadLine and Console.WriteLine methods into different methods under the GameLogic class
         // Put all logic to determine the winner here

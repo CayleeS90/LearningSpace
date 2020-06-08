@@ -85,8 +85,8 @@ namespace Learningspace
             //Hw2.Run hw2 = new Hw2.Run();
             //hw2.Main();
 
-            Hw3.Run hw3 = new Hw3.Run();
-            hw3.Main();
+            Hw3GameLogic gameLogic = new Hw3GameLogic();
+            gameLogic.StartGame();
 
             //Hw4 hw4 = new Hw4();
             //hw4.Main();
