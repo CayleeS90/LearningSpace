@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Learningspace
+namespace LearningSpace.Basics_Part2.HomeWork.Hw4
 {
     class Program
     {
@@ -85,11 +85,11 @@ namespace Learningspace
             //Hw2.Run hw2 = new Hw2.Run();
             //hw2.Main();
 
-            Hw3GameLogic gameLogic = new Hw3GameLogic();
-            gameLogic.StartGame();
+            //Hw3GameLogic gameLogic = new Hw3GameLogic();
+            //gameLogic.StartGame();
 
-            //Hw4 hw4 = new Hw4();
-            //hw4.Main();
+            Hw4 hw4 = new Hw4();
+            hw4.Main();
 
             //Hw5 hw5 = new Hw5();
             //hw5.Main();

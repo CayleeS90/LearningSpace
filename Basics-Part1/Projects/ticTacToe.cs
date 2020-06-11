@@ -1,21 +1,32 @@
 ﻿using System;
 
-namespace Learningspace
+namespace LearningSpace
 {
     class TicTacToe
     {
         public void Run()
         {
-            Console.WriteLine("Let's play Tic Tac Toe!");
-            char[] arr = new char[9]
+            while (true)
             {
+                Console.WriteLine("Let's play Tic Tac Toe!");
+                char[] arr = new char[9]
+                {
                '1', '2', '3', '4', '5', '6', '7', '8', '9'
-            };
-            Game g = new Game();
-            g.DisplayBoard(arr);
-            bool isPlayerOne = true;
-            bool isDraw = false;
-            bool isWin = false;
+                };
+                Game g = new Game();
+                g.DisplayBoard(arr);
+                bool isPlayerOne = true;
+                bool isDraw = false;
+                bool isWin = false;
+                NewMethod(arr, g, ref isPlayerOne, ref isDraw, ref isWin);
+                Console.WriteLine("Game over. Would you like to play again?");
+                if (Console.ReadLine().ToUpper() != "Y") break;
+            }
+
+        }
+
+        private static void NewMethod(char[] arr, Game g, ref bool isPlayerOne, ref bool isDraw, ref bool isWin)
+        {
             while (!isWin && !isDraw)
             {
                 if (isPlayerOne == true)
@@ -39,11 +50,7 @@ namespace Learningspace
                 isWin = g.CheckForDraw(arr);
                 isDraw = g.CheckForWin(arr);
             }
-            Console.WriteLine("Game over. Would you like to play again?");
-            Console.ReadLine();
         }
-
-
     }
     public class Game
     {
