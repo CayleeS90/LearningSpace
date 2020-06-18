@@ -18,37 +18,31 @@ namespace LearningSpace
                 bool isPlayerOne = true;
                 bool isDraw = false;
                 bool isWin = false;
-                NewMethod(arr, g, ref isPlayerOne, ref isDraw, ref isWin);
+                while (!isWin && !isDraw)
+                {
+                    if (isPlayerOne == true)
+                    {
+                        Console.WriteLine("Player one choose a number.");
+                        string input = Console.ReadLine();
+                        int numInput = int.Parse(input);
+                        arr[numInput - 1] = 'x';
+                        isPlayerOne = false;
+                        g.DisplayBoard(arr);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Player two choose a number.");
+                        string input = Console.ReadLine();
+                        int numInput = int.Parse(input);
+                        arr[numInput - 1] = 'o';
+                        isPlayerOne = true;
+                        g.DisplayBoard(arr);
+                    }
+                    isWin = g.CheckForDraw(arr);
+                    isDraw = g.CheckForWin(arr);
+                }
                 Console.WriteLine("Game over. Would you like to play again?");
                 if (Console.ReadLine().ToUpper() != "Y") break;
-            }
-
-        }
-
-        private static void NewMethod(char[] arr, Game g, ref bool isPlayerOne, ref bool isDraw, ref bool isWin)
-        {
-            while (!isWin && !isDraw)
-            {
-                if (isPlayerOne == true)
-                {
-                    Console.WriteLine("Player one choose a number.");
-                    string input = Console.ReadLine();
-                    int numInput = int.Parse(input);
-                    arr[numInput - 1] = 'x';
-                    isPlayerOne = false;
-                    g.DisplayBoard(arr);
-                }
-                else
-                {
-                    Console.WriteLine("Player two choose a number.");
-                    string input = Console.ReadLine();
-                    int numInput = int.Parse(input);
-                    arr[numInput - 1] = 'o';
-                    isPlayerOne = true;
-                    g.DisplayBoard(arr);
-                }
-                isWin = g.CheckForDraw(arr);
-                isDraw = g.CheckForWin(arr);
             }
         }
     }

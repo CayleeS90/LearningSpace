@@ -69,12 +69,12 @@ namespace LearningSpace.Basics_Part2.HomeWork.Hw4
 
         public bool GameOver()
         {
-            Console.WriteLine("Game over. Would you like to play again?");
+            Console.WriteLine($"Game over. Would you like to play again?");
             
             return Console.ReadLine().ToUpper() != "Y";
         }
 
-        private bool CheckForWin(char[] arr)
+        private bool CheckForWin()
         {
             if (arr[0] == arr[3] && arr[0] == arr[6]) return true;
             if (arr[0] == arr[1] && arr[0] == arr[2]) return true;
@@ -88,23 +88,20 @@ namespace LearningSpace.Basics_Part2.HomeWork.Hw4
             return false;
         }
 
-        private bool CheckForDraw(char[] arr)
+        private bool CheckForDraw()
         {
             foreach (var item in arr)
             {
-                if (item != 'x' && item != 'o')
-                {
-                    return false;
-
-                }
+                if (item != 'x' && item != 'o') return false;
             }
+
             return true;
         }
 
         private void CheckForWinOrDraw()
         {
-            isWin = CheckForDraw(arr);
-            isDraw = CheckForWin(arr);
+            isWin = CheckForWin();
+            isDraw = CheckForDraw();
         }
     }
 }

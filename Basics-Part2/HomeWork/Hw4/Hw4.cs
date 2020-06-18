@@ -28,10 +28,10 @@ namespace LearningSpace.Basics_Part2.HomeWork.Hw4
 
             public void StartGame()
             {
+                Game g = new Game();
+
                 while (true)
                 {
-                    Game g = new Game();
-
                     g.GameIntro();
                     g.SetUpBoardData();
                     g.DisplayBoard();
