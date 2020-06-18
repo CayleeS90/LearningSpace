@@ -69,7 +69,7 @@ namespace LearningSpace.Basics_Part2.HomeWork.Hw4
 
         public bool GameOver()
         {
-            Console.WriteLine($"Game over. Would you like to play again?");
+            Console.WriteLine($"Game over. Would you like to play again?(Y/N)");
             
             return Console.ReadLine().ToUpper() != "Y";
         }
