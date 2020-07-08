@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LearningSpace.Basics_Part2.HomeWork.Hw4
+namespace LearningSpace.Basics_Part2.HomeWork
 {
     /// <summary>
     /// Classes practice

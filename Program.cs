@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace LearningSpace.Basics_Part2.HomeWork.Hw4
+namespace LearningSpace.Basics_Part2.HomeWork
 {
     class Program
     {
@@ -74,8 +74,8 @@ namespace LearningSpace.Basics_Part2.HomeWork.Hw4
             //RockClimbing rockClimbing = new RockClimbing();
             //rockClimbing.Run();
 
-            //BlackJack blackJack = new BlackJack();
-            //blackJack.Run();
+            //BlackJack blackjack = new BlackJack();
+            //blackjack.Run();
 
             /// Home Work part 2
 
@@ -88,11 +88,11 @@ namespace LearningSpace.Basics_Part2.HomeWork.Hw4
             //Hw3GameLogic gameLogic = new Hw3GameLogic();
             //gameLogic.StartGame();
 
-            Hw4 hw4 = new Hw4();
-            hw4.Main();
+            //Hw4 hw4 = new Hw4();
+            //hw4.Main();
 
-            //Hw5 hw5 = new Hw5();
-            //hw5.Main();
+            Hw5 hw5 = new Hw5();
+            hw5.Main();
         }
     }
 }

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
-namespace LearningSpace
+namespace LearningSpace.Basics_Part2.HomeWork
 {
 
     /// <summary>
@@ -14,7 +15,12 @@ namespace LearningSpace
         // Create a new project called Zelda Shop using classes!!!
         // -----------------------------------------------------------
 
-        public class Run
+        public void Main()
+        {
+            Run();
+        }
+
+        public static void Run()
         {
             // Seed the shop with 3 items
 
@@ -25,6 +31,30 @@ namespace LearningSpace
             // Have console readlines to allow Player (you) to choose items to buy as many items as you want or until shop runs out of items
 
             // Upon exit of shop, print out shop profit + shop inventory leftover + player gold + player inventory
+
+
+            Shop shop = new Shop(SeedItemData.SeedItems());
+
+            Player player = new Player("Caylee", SeedItemData.SeedPlayerItems(), 1000, 8);
+            
+            shop.PrintWelcome();
+
+            while (true)
+            {
+                shop.PrintInventory();
+                shop.PurchaseOrExit();
+
+                string playerResponse = Console.ReadLine();
+
+                if (playerResponse != "exit") shop.SellItem(playerResponse, player);
+
+                else
+                {
+                    shop.PrintExit(player);
+
+                    break;
+                }
+            }
         }
     }
 }

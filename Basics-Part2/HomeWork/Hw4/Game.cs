@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
-namespace LearningSpace.Basics_Part2.HomeWork.Hw4
+namespace LearningSpace.Basics_Part2.HomeWork
 {
     public class Game
     {
