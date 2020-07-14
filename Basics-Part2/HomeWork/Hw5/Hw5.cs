@@ -35,18 +35,25 @@ namespace LearningSpace.Basics_Part2.HomeWork
 
             Shop shop = new Shop(SeedItemData.SeedItems());
 
-            Player player = new Player("Caylee", SeedItemData.SeedPlayerItems(), 1000, 8);
-            
+            Player player = new Player("Caylee", SeedItemData.SeedPlayerItems(), 1000, 6);
+
             shop.PrintWelcome();
+            shop.PrintInventory();
+            shop.PurchaseOrExit();
 
             while (true)
             {
-                shop.PrintInventory();
-                shop.PurchaseOrExit();
-
                 string playerResponse = Console.ReadLine();
 
-                if (playerResponse != "exit") shop.SellItem(playerResponse, player);
+                if (playerResponse != "exit")
+                {
+                    if (shop.SellItem(playerResponse, player))
+                    {
+                        shop.PrintProfit();
+                        player.PrintGold();
+                        shop.ThankYou();
+                    }
+                }
 
                 else
                 {

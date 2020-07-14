@@ -56,8 +56,8 @@ namespace LearningSpace.Basics_Part2.HomeWork
             Item sash = new Item()
             {
                 Cost = 100,
-                Description = "Sash",
-                Name = "A belt that holds potions",
+                Description = "A belt that holds potions",
+                Name = "Sash",
                 Rarity = "common"
             };
 

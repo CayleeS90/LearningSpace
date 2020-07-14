@@ -27,15 +27,15 @@ namespace LearningSpace.Basics_Part2.HomeWork
 
         public void PrintInventory()
         {
-            Console.WriteLine($"You have the following items: \n  ");
+            Console.WriteLine($"{Name} has the following items:\n");
             foreach (var item in Inventory)
             {
-                Console.WriteLine($"{item.Name} worth {item.Cost} gold and is a {item.Rarity} item \n");
+                Console.WriteLine($"{item.Name}\n");
             }
         }
         public void PrintGold()
         {
-            Console.WriteLine($"You have {Gold} gold left.");
+            Console.WriteLine($"{Name} has {Gold} gold now.");
         }
     }
 }
